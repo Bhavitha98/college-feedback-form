@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .required {
+            color: red;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>College Feedback Form</h1>
+
+<form action="https://formspree.io/f/myzpkeqr" method="POST">
+
+    <div class="form-group">
+        <label for="name">Name:<span class="required">*</span></label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:<span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="course">Course/Program:<span class="required">*</span></label>
+        <input type="text" id="course" name="course" required>
+    </div>
+
+    <div class="form-group">
+        <label for="year">Year of Study:<span class="required">*</span></label>
+        <select id="year" name="year" required>
+            <option value="">-- Select Year --</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="course-satisfaction">Course Satisfaction (1-5):<span class="required">*</span></label>
+        <input type="number" id="course-satisfaction" name="course-satisfaction" min="1" max="5" required>
+    </div>
+
+    <div class="form-group">
+        <label for="lecture-quality">Lecture Quality (1-5):<span class="required">*</span></label>
+        <input type="number" id="lecture-quality" name="lecture-quality" min="1" max="5" required>
+    </div>
+
+    <div class="form-group">
+        <label>Course met expectations?<span class="required">*</span></label>
+        <div class="radio-group">
+            <label><input type="radio" name="expectations" value="Yes" required> Yes</label>
+            <label><input type="radio" name="expectations" value="No"> No</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="faculty-support">Faculty Support (1-5):<span class="required">*</span></label>
+        <input type="number" id="faculty-support" name="faculty-support" min="1" max="5" required>
+    </div>
+
+    <div class="form-group">
+        <label for="campus-facilities">Campus Facilities (1-5):<span class="required">*</span></label>
+        <input type="number" id="campus-facilities" name="campus-facilities" min="1" max="5" required>
+    </div>
+
+    <div class="form-group">
+        <label for="overall-experience">Overall Experience (1-5):<span class="required">*</span></label>
+        <input type="number" id="overall-experience" name="overall-experience" min="1" max="5" required>
+    </div>
+
+    <div class="form-group">
+        <label>Recommend this college?<span class="required">*</span></label>
+        <div class="radio-group">
+            <label><input type="radio" name="recommendation" value="Yes" required> Yes</label>
+            <label><input type="radio" name="recommendation" value="No"> No</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="comments">Additional Comments:<span class="required">*</span></label>
+        <textarea id="comments" name="comments" rows="4" required></textarea>
+    </div>
+
+</form>
+
+</body>
+</html>
